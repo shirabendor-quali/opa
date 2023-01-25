@@ -1,4 +1,4 @@
-package torque
+package kuku
 
 import input as tfplan
 
