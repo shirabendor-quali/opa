@@ -1,4 +1,4 @@
-package kuku
+package torque.terraform_plan
 
 import input as tfplan
 
