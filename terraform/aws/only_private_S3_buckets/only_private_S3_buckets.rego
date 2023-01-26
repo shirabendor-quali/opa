@@ -4,6 +4,8 @@ import input as tfplan
 
 # --- Validate S3 buckets acls are private ---
 
+# just a commit
+
 # In case the S3 acl was declared as part of the bucket resouce definiton
 deny[reason] {
     resources:= tfplan.resource_changes[_]
