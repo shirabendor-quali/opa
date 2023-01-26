@@ -1,4 +1,4 @@
-package torque
+package gamal
 
 import input as tfplan
 
