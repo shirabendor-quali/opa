@@ -1,6 +1,6 @@
 package torque.environment
 
 deny[reason] {
-  x:= data.test_data
+  not contains(data.allowed_regions4, region)
   reason:= "Some random reason"
 }
