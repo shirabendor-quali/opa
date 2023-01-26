@@ -11,6 +11,7 @@ deny[reason] {
     resources:= tfplan.resource_changes[_]
     resources.type == "aws_s3_bucket"
     resources.change.after.acl != "private"
+    x:=data.my_data
     reason:= "Deployment of not private AWS S3 bucket is not allowed"
 }
 
