@@ -1,4 +1,4 @@
-package gamal
+package torque.terraform_plan
 
 import input as tfplan
 
