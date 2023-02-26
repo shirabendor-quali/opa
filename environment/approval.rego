@@ -8,15 +8,15 @@ default reason := ""
 
 
 result = { "decision": "Denied", "reason": "sandbox duration exceed max duration" } if {
-    data.max_duration < input.duration_minutes
+    data.extend_max_duration < input.extend_duration_minutes
 } 
 
 result = { "decision": "Manual", "reason": "sandbox duration require approval" } if {
-	data.max_duration > input.duration_minutes
-    data.duration_for_manual < input.duration_minutes
+	data.extend_max_duration > input.extend_duration_minutes
+    data.extend_duration_for_manual < input.extend_duration_minutes
 } 
 
 result = { "decision": "Approved" } if {
-	data.max_duration > input.duration_minutes
-    data.duration_for_manual > input.duration_minutes
+	data.extend_max_duration > input.extend_duration_minutes
+    data.extend_duration_for_manual > input.extend_duration_minutes
 }
