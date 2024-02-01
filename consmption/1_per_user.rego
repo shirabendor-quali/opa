@@ -17,7 +17,7 @@ result := {"decision": "Denied", "reason": "max_active_envs_in_space_per_owner m
 	not is_number(data.max_active_envs_in_space_per_owner)
 }
 
-result = {"decision": "Denied", "reason": "result = {"decision": "Denied", "reason": "aaaa" + data.max_active_envs_in_space_per_owner + "cccc"}
+result = {"decision": "Denied", "reason": "aaaa" + data.max_active_envs_in_space_per_owner + "cccc"}
 if {
         is_number(data.max_active_envs_in_space_per_owner)
 	data.max_active_envs_in_space_per_owner < input.owner_active_environments_in_space + 1
