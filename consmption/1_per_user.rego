@@ -17,7 +17,7 @@ result := {"decision": "Denied", "reason": "max_active_envs_in_space_per_owner m
 	not is_number(data.max_active_envs_in_space_per_owner)
 }
 
-result = {"decision": "Denied", "reason": "test"} if {
+result = {"decision": "Denied", "reason": "This space has a limitation of " + str(data.max_active_envs_in_space_per_owner) + " concurrent active environments per user. You have reached this limit. Try terminating one of your currently active environments before launching a new one." } if {
         is_number(data.max_active_envs_in_space_per_owner)
 	data.max_active_envs_in_space_per_owner < input.owner_active_environments_in_space + 1
 }
